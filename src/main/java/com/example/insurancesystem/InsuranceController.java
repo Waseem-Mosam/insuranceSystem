@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import java.io.IOException;
@@ -63,6 +64,18 @@ public class InsuranceController {
     @FXML
     private Button goBackButton;
 
+    //For policy info retrieval page
+    @FXML
+    private TextField omangNoRetrieval;
+    @FXML
+    private TextField claimNoRetrieval;
+    @FXML
+    private Button submitButtonRetrieval;
+    @FXML
+    private Button goBackRetrieval;
+    @FXML
+    private ListView<String> policyRetListView;
+
     //Redirects user to policy holder entry screen when button clicked
     public void toPolicyHolderEntry(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("policyHolderEntry.fxml"));
@@ -74,6 +87,14 @@ public class InsuranceController {
 
     public void toProductEntry(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("productEntry.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void toPolicyInfoRetrieval(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("retrievePolicyInfo.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -138,6 +159,39 @@ public class InsuranceController {
         }else{
             System.out.printf("Error inserting product info!");
         }
+    }
+
+    //for retrieving policy information based on claim no or omang number
+    public void retrievePolicyInfo(ActionEvent event){
+
+        if(omangNoRetrieval.getText().isBlank()==false){
+
+            String omangRetrieval = this.omangNoRetrieval.getText().toString();
+
+            DBConnect connection = new DBConnect();
+            Connection connectionDB = connection.getConnection();
+
+            String queryPolicy = "SELECT PolicyNo, PolicyName FROM `T_Policy` WHERE Omang = '"+omangRetrieval+"'; ";
+
+            try {
+                Statement stmt = connectionDB.createStatement();
+                ResultSet result = stmt.executeQuery(queryPolicy);
+
+                while(result.next()){
+                    String pNo = result.getString("PolicyNo");
+                    String pName = result.getString("PolicyName");
+                    policyRetListView.getItems().add(pNo+"      "+pName);
+                }
+
+
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+        }
+//        if(claimNoRetrieval.getText().isBlank()==false){
+//
+//        }
     }
 
 }

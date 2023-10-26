@@ -5,25 +5,58 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.insurancesystem.InsuranceController">
    <center>
-      <AnchorPane prefHeight="600.0" prefWidth="405.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="600.0" prefWidth="774.0" style="-fx-background-color: #04364A;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="backButton" layoutX="58.0" layoutY="533.0" mnemonicParsing="false" onAction="#toLandingPage" text="Go Back" />
-            <Label layoutX="96.0" layoutY="72.0" text="Add a new Policy Holder" />
-            <Label layoutX="76.0" layoutY="126.0" text="Omang" />
-            <Label layoutX="78.0" layoutY="157.0" text="First Name" />
-            <Label layoutX="81.0" layoutY="201.0" text="Last Name" />
-            <Label layoutX="95.0" layoutY="234.0" text="Email" />
-            <Label layoutX="89.0" layoutY="280.0" text="Address" />
-            <TextField fx:id="omangTextField" layoutX="157.0" layoutY="120.0" />
-            <TextField fx:id="fNameTextField" layoutX="149.0" layoutY="153.0" />
-            <TextField fx:id="lNameTextField" layoutX="157.0" layoutY="196.0" />
-            <TextField fx:id="emailTextField" layoutX="148.0" layoutY="231.0" />
-            <TextField fx:id="addressTextField" layoutX="148.0" layoutY="276.0" />
-            <Button fx:id="submitPHButton" layoutX="174.0" layoutY="327.0" mnemonicParsing="false" onAction="#submitPHInfo" text="Submit" />
+            <Button fx:id="backButton" layoutX="272.0" layoutY="386.0" mnemonicParsing="false" onAction="#toLandingPage" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #64CCC5;" text="Go Back" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="284.0" layoutY="73.0" text="Add a new Policy Holder" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="204.0" layoutY="143.0" prefHeight="18.0" prefWidth="70.0" text="Omang" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="194.0" text="First Name" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="176.0" layoutY="242.0" text="Last Name" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="212.0" layoutY="294.0" text="Email" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="199.0" layoutY="343.0" text="Address" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="omangTextField" layoutX="272.0" layoutY="136.0" prefHeight="33.0" prefWidth="263.0" promptText="Omang Number" />
+            <TextField fx:id="fNameTextField" layoutX="272.0" layoutY="186.0" prefHeight="33.0" prefWidth="263.0" promptText="First Name(s)" />
+            <TextField fx:id="lNameTextField" layoutX="272.0" layoutY="236.0" prefHeight="33.0" prefWidth="263.0" promptText="Last Name" />
+            <TextField fx:id="emailTextField" layoutX="272.0" layoutY="286.0" prefHeight="33.0" prefWidth="263.0" promptText="Email" />
+            <TextField fx:id="addressTextField" layoutX="272.0" layoutY="336.0" prefHeight="33.0" prefWidth="263.0" promptText="Address" />
+            <Button fx:id="submitPHButton" layoutX="459.0" layoutY="386.0" mnemonicParsing="false" onAction="#submitPHInfo" prefHeight="33.0" prefWidth="78.0" style="-fx-background-color: #64CCC5;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
    </center>
