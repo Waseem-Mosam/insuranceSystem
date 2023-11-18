@@ -17,12 +17,12 @@
                   <Font name="Verdana" size="14.0" />
                </font>
             </Button>
-            <Label layoutX="284.0" layoutY="73.0" text="Add a new Policy Holder" textFill="WHITE">
+            <Label layoutX="292.0" layoutY="41.0" text="Add a new Policy Holder" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="15.0" />
                </font>
             </Label>
-            <Label layoutX="204.0" layoutY="143.0" prefHeight="18.0" prefWidth="70.0" text="Omang" textFill="WHITE">
+            <Label layoutX="150.0" layoutY="143.0" prefHeight="18.0" prefWidth="137.0" text="Omang (9 digits)" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="14.0" />
                </font>
@@ -57,6 +57,7 @@
                   <Font name="Verdana" size="14.0" />
                </font>
             </Button>
+            <Label fx:id="phPageOutputLabel" alignment="CENTER" layoutX="8.0" layoutY="83.0" prefHeight="17.0" prefWidth="781.0" textFill="WHITE" />
          </children>
       </AnchorPane>
    </center>

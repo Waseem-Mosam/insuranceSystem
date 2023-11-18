@@ -51,7 +51,7 @@
                   <Font name="Verdana" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="policyHolderInfobutton" layoutX="113.0" layoutY="280.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="199.0" style="-fx-background-color: #64CCC5;" text="Retrieve Policy Holder Info" textFill="WHITE">
+            <Button fx:id="policyHolderInfobutton" layoutX="113.0" layoutY="280.0" mnemonicParsing="false" onAction="#toRetrievalListPage" prefHeight="38.0" prefWidth="199.0" style="-fx-background-color: #64CCC5;" text="Retrieve Policy Holder Info" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="13.0" />
                </font>

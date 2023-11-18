@@ -17,7 +17,7 @@
             <Label layoutX="102.0" layoutY="182.0" text="Claim Number" textFill="WHITE" />
             <TextField fx:id="omangNoRetrieval" layoutX="208.0" layoutY="125.0" prefHeight="33.0" prefWidth="219.0" promptText="Omang Number" />
             <TextField fx:id="claimNoRetrieval" layoutX="208.0" layoutY="175.0" prefHeight="33.0" prefWidth="219.0" promptText="Claim Number" />
-            <Label alignment="CENTER" layoutX="3.0" layoutY="86.0" prefHeight="18.0" prefWidth="501.0" text="Fill out one of the following fields:" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="9.0" layoutY="71.0" prefHeight="18.0" prefWidth="501.0" text="Fill out one of the following fields:" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="14.0" />
                </font>
@@ -37,6 +37,8 @@
                   <Font name="Verdana" size="14.0" />
                </font>
             </Button>
+            <Label layoutX="313.0" layoutY="158.0" text="or" textFill="WHITE" />
+            <Label fx:id="retPolicyOutputLabel" alignment="CENTER" layoutX="-1.0" layoutY="91.0" prefHeight="17.0" prefWidth="508.0" textFill="WHITE" />
          </children>
       </AnchorPane>
    </left>

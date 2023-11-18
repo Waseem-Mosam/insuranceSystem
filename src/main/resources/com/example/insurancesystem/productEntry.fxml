@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,12 +13,12 @@
    <left>
       <AnchorPane prefHeight="600.0" prefWidth="799.0" style="-fx-background-color: #04364A;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="320.0" layoutY="56.0" text="Enter Product info" textFill="WHITE">
+            <Label layoutX="312.0" layoutY="28.0" text="Enter Product info" textFill="WHITE">
                <font>
                   <Font name="Verdana Bold" size="16.0" />
                </font>
             </Label>
-            <Label layoutX="182.0" layoutY="141.0" text="Product ID" textFill="WHITE">
+            <Label layoutX="111.0" layoutY="143.0" text="Product ID (5 digits)" textFill="WHITE">
                <font>
                   <Font name="Verdana" size="14.0" />
                </font>
@@ -55,8 +56,11 @@
             <TextField fx:id="productIDTextField" layoutX="272.0" layoutY="136.0" prefHeight="33.0" prefWidth="263.0" promptText="Product ID" />
             <TextField fx:id="productNameTextField" layoutX="272.0" layoutY="186.0" prefHeight="33.0" prefWidth="263.0" promptText="Product Name" />
             <TextField fx:id="productTypeTextField" layoutX="272.0" layoutY="236.0" prefHeight="33.0" prefWidth="263.0" promptText="Product Type" />
-            <TextField fx:id="policyNoTextField" layoutX="272.0" layoutY="286.0" prefHeight="33.0" prefWidth="263.0" promptText="Policy Number" />
-            <TextField fx:id="areaTextField" layoutX="272.0" layoutY="336.0" prefHeight="33.0" prefWidth="263.0" promptText="Business Area Name" />
+            <ComboBox fx:id="areaNameComboBox" layoutX="272.0" layoutY="335.0" prefHeight="33.0" prefWidth="263.0" promptText="Select Business Area" />
+            <Button fx:id="generateDropdownButton" layoutX="313.0" layoutY="69.0" mnemonicParsing="false" onAction="#populateAreaComboBox" style="-fx-background-color: #64CCC5;" text="Generate Dropdown List" textFill="WHITE" />
+            <Label layoutX="107.0" layoutY="73.0" text="First generate dropdown menu items" textFill="WHITE" />
+            <ComboBox fx:id="policyNoComboBox" layoutX="272.0" layoutY="285.0" prefHeight="33.0" prefWidth="263.0" promptText="Select Policy No" />
+            <Label fx:id="productPageOutputLabel" alignment="CENTER" layoutX="5.0" layoutY="107.0" prefHeight="17.0" prefWidth="794.0" textFill="WHITE" />
          </children>
       </AnchorPane>
    </left>
